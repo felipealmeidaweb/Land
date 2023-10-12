@@ -1,0 +1,85 @@
+.container00{
+            position: relative; /* Adicione position: relative; se ainda não estiver presente */
+            z-index: 1; /* Ajuste o valor do z-index conforme necessário */
+      
+
+    &.container01{
+            
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+          
+                  
+        
+        background-image: url(../../img/cena-do-jogador-profissional-de-esports-em-perfil-colorido-com-luz-vermelha-e-azul-generativa-ai.jpg);
+       
+      
+    }
+    &.container02{
+        background-image: url(../../img/equipamento-de-boate-azul-iluminado-por-ia-generativa-de-iluminacao-futurista.jpg);
+  
+       
+       
+
+    }
+    &.container03{
+        background-image: url(../../img/desenho-de-fundo-abstrato-de-neon.jpg);
+        
+      
+    }
+    &.container04{
+        background-image: url(../../img/jogador-de-vista-lateral-jogando-no-laptop.jpg)
+    
+        
+       
+
+    }
+}
+.titlePadding{
+    padding-top: 200px;
+}
+.short-title{
+    width: 550px;
+    margin-bottom: 25px;
+}
+.mediumt{
+    margin-bottom: 25px;
+    width: 600px;
+}
+.button{
+padding: $padding-btn;
+border: 2px solid white;
+}
+
+
+
+@media(max-width:750px){
+   
+    .button-esp{
+        margin-top: 20rem;
+    }
+    .short-title,.mediumt{
+        width: auto;
+        font-size: 50px;
+    }
+}
+@media(max-width:405px){
+   
+    .button-esp{
+        margin-top: 20rem;
+    }
+    .short-title,.mediumt{
+        width: auto;
+        font-size: 50px;
+    }
+}
+@media(max-width:350px){
+   
+    .button-esp{
+        margin-top: 20rem;
+    }
+    .short-title,.mediumt{
+        width: auto;
+        font-size: 50px;
+    }
+}

@@ -1,0 +1,606 @@
+@charset "UTF-8";
+@import 'animate.css';
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&family=Rubik&display=swap");
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+.header {
+  font-size: 14px;
+  font-weight: bold;
+}
+.header #navitens {
+  font-family: "Ubuntu", sans-serif;
+  color: #ffffff;
+  text-shadow: 3px 3px 20px #ff99cc, -2px 1px 30px #ff99cc;
+  margin-left: 30px;
+  transition: 0.7s;
+}
+.header #navitens:hover {
+  border: 1px solid #ff99cc;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+}
+
+.container00 {
+  min-height: 100vh;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#btn,
+#btn::after {
+  padding: 10px 50px;
+  font-size: 20px;
+  border-radius: 5px;
+  color: #fff;
+  /* From https://css.glass */
+  background: rgba(255, 153, 204, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  text-shadow: 3px 3px 20px #ff99cc, -2px 1px 30px #ff99cc;
+  background-color: transparent;
+  position: relative;
+}
+
+#btn::after {
+  --move1: inset(50% 50% 50% 50%);
+  --move2: inset(31% 0 40% 0);
+  --move3: inset(39% 0 15% 0);
+  --move4: inset(45% 0 40% 0);
+  --move5: inset(45% 0 6% 0);
+  --move6: inset(14% 0 61% 0);
+  clip-path: var(--move1);
+  content: "GLITCH";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+#btn:hover::after {
+  animation: glitch_4011 1s;
+  text-shadow: 10 10px 10px black;
+  animation-timing-function: steps(2, end);
+  text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+  background-color: transparent;
+  border: 3px solid rgb(0, 255, 213);
+}
+
+#btn:hover {
+  text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+}
+
+#btn:hover {
+  background-color: transparent;
+  border: 1px solid rgb(0, 255, 213);
+  box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+}
+
+@keyframes glitch_4011 {
+  0% {
+    clip-path: var(--move1);
+    transform: translate(0px, -10px);
+  }
+  10% {
+    clip-path: var(--move2);
+    transform: translate(-10px, 10px);
+  }
+  20% {
+    clip-path: var(--move3);
+    transform: translate(10px, 0px);
+  }
+  30% {
+    clip-path: var(--move4);
+    transform: translate(-10px, 10px);
+  }
+  40% {
+    clip-path: var(--move5);
+    transform: translate(10px, -10px);
+  }
+  50% {
+    clip-path: var(--move6);
+    transform: translate(-10px, 10px);
+  }
+  60% {
+    clip-path: var(--move1);
+    transform: translate(10px, -10px);
+  }
+  70% {
+    clip-path: var(--move3);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--move2);
+    transform: translate(10px, -10px);
+  }
+  90% {
+    clip-path: var(--move4);
+    transform: translate(-10px, 10px);
+  }
+  100% {
+    clip-path: var(--move1);
+    transform: translate(0);
+  }
+}
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 150)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-dark .navbar-toggler {
+  border: 1px solid white;
+}
+
+.arrowDown {
+  display: inline-block;
+  width: 90px;
+  margin-top: 5px;
+}
+
+.logo-site {
+  width: 220px;
+  margin-left: -30px;
+  margin-right: 20px;
+}
+
+.footer {
+  height: 15vh;
+  background-color: black;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer a:hover {
+  color: #b9b9b9;
+}
+.footer .copy {
+  color: #555252;
+}
+
+@media (max-width: 405px) {
+  .logo-site {
+    width: 180px;
+    margin-top: 15px;
+  }
+  .footer {
+    font-size: 10px;
+  }
+  .container00 {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+@media (max-width: 350px) {
+  .logo-site {
+    width: 150px;
+    margin-top: 15px;
+  }
+  .container00 {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.container00 {
+  position: relative; /* Adicione position: relative; se ainda não estiver presente */
+  z-index: 1; /* Ajuste o valor do z-index conforme necessário */
+}
+.container00.container01 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(../../img/cena-do-jogador-profissional-de-esports-em-perfil-colorido-com-luz-vermelha-e-azul-generativa-ai.jpg);
+}
+.container00.container02 {
+  background-image: url(../../img/equipamento-de-boate-azul-iluminado-por-ia-generativa-de-iluminacao-futurista.jpg);
+}
+.container00.container03 {
+  background-image: url(../../img/desenho-de-fundo-abstrato-de-neon.jpg);
+}
+.container00.container04 {
+  background-image: url(../../img/jogador-de-vista-lateral-jogando-no-laptop.jpg);
+}
+
+.titlePadding {
+  padding-top: 200px;
+}
+
+.short-title {
+  width: 550px;
+  margin-bottom: 25px;
+}
+
+.mediumt {
+  margin-bottom: 25px;
+  width: 600px;
+}
+
+.button {
+  padding: 15px 31px;
+  border: 2px solid white;
+}
+
+@media (max-width: 750px) {
+  .button-esp {
+    margin-top: 20rem;
+  }
+  .short-title, .mediumt {
+    width: auto;
+    font-size: 50px;
+  }
+}
+@media (max-width: 405px) {
+  .button-esp {
+    margin-top: 20rem;
+  }
+  .short-title, .mediumt {
+    width: auto;
+    font-size: 50px;
+  }
+}
+@media (max-width: 350px) {
+  .button-esp {
+    margin-top: 20rem;
+  }
+  .short-title, .mediumt {
+    width: auto;
+    font-size: 50px;
+  }
+}
+.titleContent {
+  padding-top: 200px;
+}
+
+#CyberTitle {
+  font-size: 60px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 514;
+  text-shadow: 0 0 55px #e9ecef, 6px 11px 75px #49ff18, 2px 2px 20px #000000;
+}
+
+#SubTitleCyber {
+  text-shadow: 0 0 55px #e9ecef, 6px 11px 75px #49ff18, 2px 2px 20px #000000;
+}
+
+.numbers {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titleDc {
+  font-size: 5rem;
+  color: #FFFFFF;
+  text-shadow: #FFF 0px 0px 0px, #FFF 0px 0px 7px, #FFF 0px 0px 15px, rgba(255, 45, 149, 0) 0px 0px 20px, rgba(255, 45, 149, 0) 0px 0px 30px, rgba(255, 45, 149, 0) 0px 0px 40px, #ff2d95 -1px 1px 3px, #0d6efd 1px -6px 10px;
+}
+
+.cyber-desc {
+  margin-top: 51px;
+  transition: 0.3s ease;
+  border-radius: 20px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(17.6px);
+  -webkit-backdrop-filter: blur(17.6px);
+  border: 1px solid rgba(255, 255, 255, 0);
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.2941176471);
+  height: auto;
+  text-align: center;
+  line-height: 40px;
+  text-indent: 0px;
+}
+
+.cyber-desc:hover {
+  filter: drop-shadow(0px 0px 30px rgb(209, 38, 197));
+}
+
+.containerCyber-desc {
+  display: grid;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.subTitleOver {
+  padding-top: 5rem;
+  font-size: 30px;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 3px 3px 20px #ff99cc, -2px 1px 30px #ff99cc;
+}
+
+.TitleOver {
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 3rem;
+  font-size: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 3px 3px 20px #ff99cc, -2px 1px 30px #ff99cc;
+}
+
+.container00.container05 {
+  width: auto;
+  background-image: url(../../img/cyber-space-1.jpg);
+}
+.container00.container06 {
+  background-image: url(../../img/virtual-reality-7499161_1920.jpg);
+}
+.container00.carousel02 {
+  background-image: url(../../img/dark.png);
+}
+.container00.carousel03 {
+  background-image: url(../../img/neoncyber-img.jpg);
+}
+.container00.carousel04 {
+  background-image: url(../../img/vr-cyber.jpg);
+}
+.container00.container07 {
+  background-image: url(../../img/-money.png);
+}
+.container00 .table {
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+}
+.container00 .table tr td {
+  padding: 10px;
+  color: white;
+}
+
+#widthTable {
+  background-color: transparent;
+  font-size: 18px;
+}
+
+#widthTable td, tr, th {
+  background-color: transparent;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  text-shadow: 3px 3px 20px #000000, -2px 1px 30px #000000;
+}
+
+.tabelaV thead th {
+  background-color: transparent;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  /* From https://css.glass */
+  background: rgba(255, 153, 204, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  text-shadow: 3px 3px 20px #000000, -2px 1px 30px #000000;
+}
+
+.tabelaV {
+  text-shadow: 3px 3px 20px #ff99cc, -2px 1px 30px #ff99cc;
+  margin-top: 3rem;
+  /* From https://css.glass */
+  background: rgba(255, 153, 204, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.Downloaded-c {
+  background-color: #000000;
+  height: auto;
+  padding-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #555252;
+}
+
+a:hover {
+  color: #b9b9b9;
+}
+
+button {
+  border: 2px solid white;
+  margin-right: 10px;
+}
+
+.OverViewPosition {
+  margin-left: 5%;
+  padding-top: 5%;
+}
+
+.descover {
+  font-size: 25px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.carousel02 p {
+  padding: 3%;
+  color: #fff;
+  text-shadow: 3px 3px 20px #ff99cc, -2px 1px 30px #ff99cc;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  #btn {
+    margin: auto;
+    font-size: 1.4rem;
+    color: white;
+    text-decoration: dashed;
+  }
+  #btn, #btn::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .numbers {
+    font-size: 50px;
+  }
+  .titleContent .mt-5 {
+    margin-top: 7rem !important;
+  }
+  #CyberTitle {
+    font-size: 90px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 614;
+    text-shadow: 0 0 55px #e9ecef, 6px 11px 75px #49ff18, 2px 2px 20px #000000;
+  }
+  #SubTitleCyber {
+    text-shadow: 0 0 55px #e9ecef, 6px 11px 75px #49ff18, 2px 2px 20px #000000;
+    font-size: 30px;
+  }
+  .cyber-desc {
+    width: auto;
+  }
+  .descover {
+    font-size: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .container00 {
+    min-height: auto;
+  }
+  .numbers {
+    height: 60;
+    font-size: 30px;
+  }
+  #CyberTitle {
+    font-size: 30px;
+  }
+  #widthTable {
+    width: auto;
+    height: 42vh;
+    font-size: 50px;
+  }
+  .carousel04 .TitleOver {
+    margin-top: 15%;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .carousel04 .subTitleOver {
+    margin-top: 15%;
+    padding-top: 20px;
+    font-size: 20px;
+  }
+  .titleDc {
+    font-size: 40px;
+    color: #FFFFFF;
+    text-shadow: #FFF 0px 0px 0px, #FFF 0px 0px 7px, #FFF 0px 0px 15px, rgba(255, 45, 149, 0) 0px 0px 20px, rgba(255, 45, 149, 0) 0px 0px 30px, rgba(255, 45, 149, 0) 0px 0px 40px, #ff2d95 -1px 1px 3px, #0d6efd 1px -6px 10px;
+  }
+  .OverViewPosition {
+    width: auto;
+    margin-left: 5%;
+    padding: 5%;
+  }
+  .subTitleOver {
+    font-size: 23px;
+    width: auto;
+    padding: 2%;
+  }
+  .TitleOver {
+    font-family: "Ubuntu", sans-serif;
+    width: auto;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 3px 3px 20px #ff99cc, -2px 1px 30px #ff99cc;
+  }
+  #widthTable {
+    background-color: transparent;
+    font-size: 13px;
+  }
+  .cyber-desc {
+    font-size: 15px;
+  }
+}
+@media (max-width: 375px) {
+  #CyberTitle {
+    font-size: 22px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 614;
+    text-shadow: 0 0 55px #e9ecef, 6px 11px 75px #49ff18, 2px 2px 20px #000000;
+  }
+  .TitleOver {
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .subTitleOver {
+    font-size: 10px;
+    text-align: center;
+  }
+  .carousel04 .TitleOver {
+    margin-top: 30%;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+  }
+  .carousel04 .subTitleOver {
+    margin-top: 48%;
+    padding-top: 20px;
+    font-size: 20px;
+  }
+  .Downloaded-c {
+    padding-top: 12px;
+    height: 30vh;
+  }
+  .Downloaded-c .p {
+    margin-top: -27px;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 350px) {
+  .Downloaded-c {
+    height: auto;
+    padding: 20px;
+  }
+  #widthTable {
+    background-color: transparent;
+    font-size: 10px;
+  }
+  .TitleOver {
+    font-size: 15px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .subTitleOver {
+    font-size: 10px;
+    text-align: center;
+  }
+  .descover {
+    font-size: 15px;
+    font-family: "Ubuntu", sans-serif;
+  }
+}
+* {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
